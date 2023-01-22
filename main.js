@@ -54,6 +54,8 @@ class Input {
     set type(value) {
         if(["text", "email", "password", "submit"].includes(value)) {
             this._type = value;
+        } else {
+            throw new Error(`The input ${value} type doesn't exist. only 4 types can be allowed (text, email, password and submit). `);
         }
     }
 
